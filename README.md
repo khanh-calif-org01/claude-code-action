@@ -25,6 +25,8 @@ This command will guide you through setting up the GitHub app and required secre
 
 ### Manual Setup (Direct API)
 
+[How to manually install Claude Code](https://github.com/anthropics/claude-code-action?tab=readme-ov-file#manual-setup-direct-api)
+
 **Requirements**: You must be a repository admin to complete these steps.
 
 1. Install the Claude GitHub app to your repository: https://github.com/apps/claude
