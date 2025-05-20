@@ -2,7 +2,8 @@ import { expect, describe, it } from "bun:test";
 import { ensureProperlyEncodedUrl } from "../src/github/operations/comment-logic";
 
 describe("ensureProperlyEncodedUrl", () => {
-  it("should handle URLs with spaces", () => {
+  it("should handle URLs with spaces", () => {  
+    // add comment
     const url =
       "https://github.com/owner/repo/compare/main...branch?quick_pull=1&title=fix: update message&body=Description here";
     const expected =
