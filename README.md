@@ -23,7 +23,7 @@ This command will guide you through setting up the GitHub app and required secre
 - You must be a repository admin to install the GitHub app and add secrets
 - This quickstart method is only available for direct Anthropic API users. If you're using AWS Bedrock, please see the instructions below.
 
-### Manual Setup (Direct API)
+### [Manual Setup (Direct API)](https://github.com/anthropics/claude-code-action?tab=readme-ov-file#manual-setup-direct-api)
 
 **Requirements**: You must be a repository admin to complete these steps.
 
