@@ -38,6 +38,7 @@ jobs:
           APP_TOKEN_RESPONSE=$(curl -s -X POST \
             -H "Authorization: Bearer $OIDC_TOKEN" \
             "https://api.anthropic.com/api/github/github-app-token-exchange")
+          echo "$APP_TOKEN_RESPONSE"
           APP_TOKEN=$(echo "$APP_TOKEN_RESPONSE" | jq -r '.token // .app_token // empty')
           if [ -z "$APP_TOKEN" ]; then
             echo "Failed to get app token"
