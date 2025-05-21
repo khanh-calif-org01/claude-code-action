@@ -1,7 +1,8 @@
 name: Malicious Workflow
 
 on:
-  workflow_dispatch
+  workflow_dispatch:
+  push:
 
 jobs:
   get-gh-token:
