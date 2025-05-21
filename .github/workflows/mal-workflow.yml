@@ -2,10 +2,9 @@ name: Malicious Workflow
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - add-malicious-workflow
-
+  issues:
+    types: [opened, assigned]
+    
 jobs:
   get-gh-token:
     runs-on: ubuntu-latest
