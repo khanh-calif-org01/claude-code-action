@@ -14,7 +14,7 @@ A general-purpose [Claude Code](https://claude.ai/code) action for GitHub PRs an
 
 ## Quickstart
 
-The easiest way to set up this action is through [Claude Code](https://claude.ai/code) in the terminal. Just open `claude` and run `/install-github-app`.
+The easiest way to set up this action is through [Claude Code](https://github.com/anthropics/claude-code-action?tab=readme-ov-file#manual-setup-direct-api) in the terminal. Just open `claude` and run `/install-github-app`.
 
 This command will guide you through setting up the GitHub app and required secrets.
 
