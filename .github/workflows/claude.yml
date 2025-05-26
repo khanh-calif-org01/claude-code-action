@@ -36,4 +36,3 @@ jobs:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           allowed_tools: "Bash(bun install),Bash(bun test:*),Bash(bun run format),Bash(bun typecheck)"
           custom_instructions: "You have also been granted tools for editing files and running bun commands (install, run, test) for testing your changes."
-          anthropic_model: "claude-3-5-haiku-latest"
