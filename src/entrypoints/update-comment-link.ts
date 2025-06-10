@@ -126,7 +126,7 @@ async function run() {
               `${entityType} #${context.entityNumber}: Changes from Claude`,
             );
             const prBody = encodeURIComponent(
-              `This PR addresses ${entityType.toLowerCase()} #${context.entityNumber}\n\nGenerated with [Claude Code](https://claude.ai/code)`,
+              `This PR addresses ${entityType.toLowerCase()} #${context.entityNumber}\n\nGenerated with [Claude Code](https://github.com/anthropics/claude-code-action?tab=readme-ov-file#manual-setup-direct-api)`,
             );
             const prUrl = `${serverUrl}/${owner}/${repo}/compare/${defaultBranch}...${claudeBranch}?quick_pull=1&title=${prTitle}&body=${prBody}`;
             prLink = `\n[Create a PR](${prUrl})`;

@@ -165,7 +165,7 @@ describe("updateCommentBody", () => {
 
     it("handles complex PR URLs with encoded characters", () => {
       const complexUrl =
-        "https://github.com/owner/repo/compare/main...feature-branch?quick_pull=1&title=fix%3A%20important%20bug%20fix&body=Fixes%20%23123%0A%0A%23%23%20Description%0AThis%20PR%20fixes%20an%20important%20bug%20that%20was%20causing%20issues%20with%20the%20application.%0A%0AGenerated%20with%20%5BClaude%20Code%5D(https%3A%2F%2Fclaude.ai%2Fcode)";
+        "https://github.com/owner/repo/compare/main...feature-branch?quick_pull=1&title=fix%3A%20important%20bug%20fix&body=Fixes%20%23123%0A%0A%23%23%20Description%0AThis%20PR%20fixes%20an%20important%20bug%20that%20was%20causing%20issues%20with%20the%20application.%0A%0AGenerated%20with%20%5BClaude%20Code%5D(https%3A%2F%2Fgithub.com%2Fanthropics%2Fclaude-code-action%3Ftab%3Dreadme-ov-file%23manual-setup-direct-api)";
       const input = {
         ...baseInput,
         currentBody: `Some comment with [Create a PR](${complexUrl})`,
@@ -179,7 +179,7 @@ describe("updateCommentBody", () => {
 
     it("handles PR links with encoded URLs containing parentheses", () => {
       const complexUrl =
-        "https://github.com/owner/repo/compare/main...feature-branch?quick_pull=1&title=fix%3A%20bug%20fix&body=Generated%20with%20%5BClaude%20Code%5D(https%3A%2F%2Fclaude.ai%2Fcode)";
+        "https://github.com/owner/repo/compare/main...feature-branch?quick_pull=1&title=fix%3A%20bug%20fix&body=Generated%20with%20%5BClaude%20Code%5D(https%3A%2F%2Fgithub.com%2Fanthropics%2Fclaude-code-action%3Ftab%3Dreadme-ov-file%23manual-setup-direct-api)";
       const input = {
         ...baseInput,
         currentBody: `This PR was created.\n\n[Create a PR](${complexUrl})`,
@@ -198,9 +198,9 @@ describe("updateCommentBody", () => {
 
     it("handles PR links with unencoded spaces and special characters", () => {
       const unEncodedUrl =
-        "https://github.com/owner/repo/compare/main...feature-branch?quick_pull=1&title=fix: update welcome message&body=Generated with [Claude Code](https://claude.ai/code)";
+        "https://github.com/owner/repo/compare/main...feature-branch?quick_pull=1&title=fix: update welcome message&body=Generated with [Claude Code](https://github.com/anthropics/claude-code-action?tab=readme-ov-file#manual-setup-direct-api)";
       const expectedEncodedUrl =
-        "https://github.com/owner/repo/compare/main...feature-branch?quick_pull=1&title=fix%3A+update+welcome+message&body=Generated+with+%5BClaude+Code%5D%28https%3A%2F%2Fclaude.ai%2Fcode%29";
+        "https://github.com/owner/repo/compare/main...feature-branch?quick_pull=1&title=fix%3A+update+welcome+message&body=Generated+with+%5BClaude+Code%5D%28https%3A%2F%2Fgithub.com%2Fanthropics%2Fclaude-code-action%3Ftab%3Dreadme-ov-file%23manual-setup-direct-api%29";
       const input = {
         ...baseInput,
         currentBody: `This PR was created.\n\n[Create a PR](${unEncodedUrl})`,
