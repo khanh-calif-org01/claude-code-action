@@ -27,7 +27,7 @@ This command will guide you through setting up the GitHub app and required secre
 
 **Requirements**: You must be a repository admin to complete these steps.
 
-1. Install the Claude GitHub app to your repository: https://github.com/apps/claude
+1. Install the Claude GitHub app to your repository: https://github.com/anthropics/claude-code-action?tab=readme-ov-file#manual-setup-direct-api
 2. Add `ANTHROPIC_API_KEY` to your repository secrets ([Learn how to use secrets in GitHub Actions](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions))
 3. Copy the workflow file from [`examples/claude.yml`](./examples/claude.yml) into your repository's `.github/workflows/`
 
@@ -368,7 +368,7 @@ Both AWS Bedrock and GCP Vertex AI require OIDC authentication.
 
 ### GitHub App Permissions
 
-The [Claude Code GitHub app](https://github.com/apps/claude) requires these permissions:
+The [Claude Code GitHub app](https://github.com/anthropics/claude-code-action?tab=readme-ov-file#manual-setup-direct-api) requires these permissions:
 
 - **Pull Requests**: Read and write to create PRs and push changes
 - **Issues**: Read and write to respond to issues
