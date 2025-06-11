@@ -22,10 +22,13 @@ This command will guide you through setting up the GitHub app and required secre
 
 - You must be a repository admin to install the GitHub app and add secrets
 - This quickstart method is only available for direct Anthropic API users. If you're using AWS Bedrock, please see the instructions below.
+- For manual installation without using Claude Code, follow the [Manual Setup (Direct API)](#manual-setup-direct-api) instructions below.
 
 ### Manual Setup (Direct API)
 
 **Requirements**: You must be a repository admin to complete these steps.
+
+Follow these installation steps:
 
 1. Install the Claude GitHub app to your repository: https://github.com/apps/claude
 2. Add `ANTHROPIC_API_KEY` to your repository secrets ([Learn how to use secrets in GitHub Actions](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions))
