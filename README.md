@@ -267,7 +267,9 @@ You can authenticate with Claude using any of these three methods:
 2. Amazon Bedrock with OIDC authentication
 3. Google Vertex AI with OIDC authentication
 
-For detailed setup instructions for AWS Bedrock and Google Vertex AI, see the [official documentation](https://docs.anthropic.com/en/docs/claude-code/github-actions#using-with-aws-bedrock-%26-google-vertex-ai).
+For detailed setup instructions:
+- For direct Anthropic API, see the [Manual Setup (Direct API)](#manual-setup-direct-api) section above
+- For AWS Bedrock and Google Vertex AI, see the [official documentation](https://docs.anthropic.com/en/docs/claude-code/github-actions#using-with-aws-bedrock-%26-google-vertex-ai).
 
 **Note**:
 
